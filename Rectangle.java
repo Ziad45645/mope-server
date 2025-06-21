@@ -1,48 +1,26 @@
-package io.mopesbox.Collision;
+package io.mopesbox.Objects;
 
-public class Rectangle {
-    private double x;
-    private double y;
+public class Rectangle extends GameObject{
+
+
+
     private double width;
+    private double height;
+    public Rectangle(int id, double x, double y, double width, double height, int type) {
+        super(id, x, y, 0, type);
 
-    public double getX() {
-        return x;
-    }
+        this.width = width;
+        this.height = height;
 
-    public void setX(double x) {
-        this.x = x;
-    }
-
-    public double getY() {
-        return y;
-    }
-
-    public void setY(double y) {
-        this.y = y;
+        this.isCircle = false;
+        this.isRectangle = true;
     }
 
     public double getWidth() {
         return width;
     }
 
-    public void setWidth(double width) {
-        this.width = width;
-    }
-
     public double getHeight() {
         return height;
-    }
-
-    public void setHeight(double height) {
-        this.height = height;
-    }
-
-    private double height;
-
-    public Rectangle(double x, double y, double width, double height) {
-        this.x = x;
-        this.y = y;
-        this.width = width;
-        this.height = height;
     }
 }
